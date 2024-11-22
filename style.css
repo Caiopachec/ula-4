@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #ffc8d9, #e26612);
+    padding: 0 20px;
+    height: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header .img2 img {
+    height: 90px;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 20px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #030303;
+    transition: 0.3s all;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 50px; 
+    padding: 50px 20px;
+}
+
+aside {
+    max-width: 500px;
+    text-align: left; 
+}
+
+h2 {
+    font-size: 56px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h2 span {
+    font-weight: bold;
+    background: linear-gradient(to right, #ff6090, #e26612);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+}
+
+form [type="submit"] {
+    height: 50px;
+    width: 40%;
+    background: linear-gradient(to right, #ff6090, #e26612);
+    color: white;
+    font-weight: bold;
+   
+}
+
+form [type="submit"]:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+article .img1 {
+    width: 450px;
+    max-width: 100%;
+    animation: float 3s ease-in-out infinite; /* Animação de flutuar */
+}
+
+
+/* Animação de flutuar */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 4px solid  #e26612;
+    position: relative;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+footer .social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);
+    color: #ff6090;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    aside {
+        text-align: center;
+    }
+
+    article .img1 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
